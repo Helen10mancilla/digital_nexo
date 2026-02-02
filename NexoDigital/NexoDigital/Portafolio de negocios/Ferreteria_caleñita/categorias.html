@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ferretería Central | Pedidos por WhatsApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/demo.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Ferretería Central</h1>
+    <a href="#pedido" class="btn-primary">Pedir por WhatsApp</a>
+</header>
+
+<section class="hero">
+    <h2>Todo para construcción, hogar y ferretería</h2>
+    <p>Haz tu pedido fácil y rápido. Te atendemos por WhatsApp.</p>
+</section>
+
+<section class="productos">
+    <h2>Productos</h2>
+
+    <div class="grid">
+
+        <div class="producto">
+            <h3>Martillo de acero</h3>
+            <p>Resistente, mango antideslizante.</p>
+            <span>$25.000</span>
+            <button onclick="agregarProducto('Martillo de acero', 25000)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <h3>Taladro inalámbrico</h3>
+            <p>Batería recargable, alta potencia.</p>
+            <span>$180.000</span>
+            <button onclick="agregarProducto('Taladro inalámbrico', 180000)">Agregar</button>
+        </div>
+
+        <div class="producto">
+            <h3>Caja de tornillos</h3>
+            <p>100 unidades, acero reforzado.</p>
+            <span>$15.000</span>
+            <button onclick="agregarProducto('Caja de tornillos', 15000)">Agregar</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="pedido" class="pedido">
+    <h2>Tu pedido</h2>
+
+    <input type="text" id="nombre" placeholder="Tu nombre">
+
+    <ul id="listaPedido"></ul>
+
+    <p class="total">Total: $<span id="total">0</span></p>
+
+    <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+        Enviar pedido por WhatsApp
+    </button>
+</section>
+
+<section class="mapa">
+    <h2>Encuéntranos</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=ferreteria&output=embed"
+        loading="lazy">
+    </iframe>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Ferretería Central · Pedidos por WhatsApp</p>
+</footer>
+
+<script src="./js/demo.js"></script>
+</body>
+</html>

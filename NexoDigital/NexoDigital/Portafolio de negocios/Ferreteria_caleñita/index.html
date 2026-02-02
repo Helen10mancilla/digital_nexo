@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería Villa Rica | Materiales y Herramientas Profesionales</title>
+    <meta name="description" content="Ferretería especializada en materiales de construcción, herramientas profesionales. Pedidos rápidos por WhatsApp.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+</head>
+<body>
+    <!-- Header Profesional -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Ferretería <span class="logo-highlight">Villa Rica</span></h1>
+                    <p>Materiales & Herramientas</p>
+                </div>
+            </div>
+
+            <!-- Navegación Principal -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#productos" class="nav-link"><i class="fas fa-box"></i> Productos</a></li>
+                    <li><a href="#categorias" class="nav-link"><i class="fas fa-th-large"></i> Categorías</a></li>
+                    <li><a href="#como-comprar" class="nav-link"><i class="fas fa-shopping-cart"></i> Cómo Comprar</a></li>
+                    <li><a href="#contacto" class="nav-link"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Carrito y Acciones -->
+            <div class="header-actions">
+                <div class="cart-wrapper">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </button>
+                </div>
+                <a href="https://wa.me/573001234567" class="btn-whatsapp-header" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito Desplegable -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Tu Pedido</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Tu carrito está vacío</p>
+                <p>Agrega productos desde el catálogo</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-totals">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0</span>
+                </div>
+                <div class="total-row">
+                    <span>Envío:</span>
+                    <span id="cartShipping">$0</span>
+                </div>
+                <div class="total-row main-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+            </div>
+            
+            <div class="cart-actions">
+                <button class="btn btn-outline" id="clearCart">Vaciar Carrito</button>
+                <button class="btn btn-primary" id="checkoutBtn">
+                    <i class="fab fa-whatsapp"></i> Enviar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span><i class="fas fa-star"></i> Ferretería Profesional</span>
+                </div>
+                <h1 class="hero-title">Todo para tu <span class="hero-highlight">obra y construcción</span></h1>
+                <p class="hero-description">
+                    Materiales de calidad, herramientas profesionales y asesoría técnica especializada. 
+                    Entregas rápidas en Villa Rica y alrededores.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div>
+                            <h4>Envío Rápido</h4>
+                            <p>Entrega en 24 horas</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Calidad Garantizada</h4>
+                            <p>Productos originales</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <h4>Soporte Técnico</h4>
+                            <p>Asesoría especializada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#productos" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-cart"></i> Ver Catálogo
+                    </a>
+                    <a href="https://wa.me/573116457927" class="btn btn-whatsapp btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1572981779301-7d5c5c9c9c9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Herramientas profesionales">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="categories" id="categorias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras <span>Categorías</span></h2>
+                <p class="section-subtitle">Todo lo que necesitas organizado por especialidad</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Herramientas Manuales</h3>
+                    <p>Martillos, destornilladores, alicates, llaves y más</p>
+                    <a href="#herramientas" class="category-link">Ver productos →</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Herramientas Eléctricas</h3>
+                    <p>Taladros, pulidoras, sierras, lijadoras profesionales</p>
+                    <a href="#electricas" class="category-link">Ver productos →</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Material Eléctrico</h3>
+                    <p>Cables, interruptores, tomacorrientes, luminarias</p>
+                    <a href="#electrico" class="category-link">Ver productos →</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Fontanería</h3>
+                    <p>Tuberías, grifería, sanitarios y accesorios</p>
+                    <a href="#fontaneria" class="category-link">Ver productos →</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Construcción</h3>
+                    <p>Cemento, ladrillos, arena, grava, varillas</p>
+                    <a href="#construccion" class="category-link">Ver productos →</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Pintura y Acabados</h3>
+                    <p>Pinturas, barnices, selladores y herramientas</p>
+                    <a href="#pintura" class="category-link">Ver productos →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="products" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Productos <span>Destacados</span></h2>
+                <p class="section-subtitle">Los más vendidos y mejor valorados por nuestros clientes</p>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="herramientas">Herramientas</button>
+                <button class="filter-btn" data-filter="electricas">Eléctricas</button>
+                <button class="filter-btn" data-filter="materiales">Materiales</button>
+                <button class="filter-btn" data-filter="fontaneria">Fontanería</button>
+            </div>
+            
+            <!-- Grid de Productos -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-outline" id="loadMore">
+                    <i class="fas fa-plus"></i> Cargar más productos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Comprar -->
+    <section class="how-to-buy" id="como-comprar">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo <span>Comprar?</span></h2>
+                <p class="section-subtitle">Sigue estos simples pasos para realizar tu pedido</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Explora el Catálogo</h3>
+                    <p>Busca los productos que necesitas en nuestras categorías organizadas</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                    <h3>Agrega al Carrito</h3>
+                    <p>Selecciona cantidades y añade los productos a tu carrito de compras</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Envía por WhatsApp</h3>
+                    <p>Revisa tu pedido y envíalo automáticamente por WhatsApp</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Recibe tu Pedido</h3>
+                    <p>Coordina la entrega y pago directamente con nuestro equipo</p>
+                </div>
+            </div>
+            
+            <div class="whatsapp-cta">
+                <div class="whatsapp-info">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>¿Necesitas ayuda?</h3>
+                        <p>Nuestro equipo está listo para asesorarte por WhatsApp</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/573116457927" class="btn btn-whatsapp btn-lg" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- Modal para datos del cliente -->
+<div class="modal" id="customerModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-user"></i> Tus datos</h3>
+            <button class="close-modal" id="closeCustomerModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="customerForm">
+                <div class="form-group">
+                    <label for="customerName">Nombre completo *</label>
+                    <input type="text" id="customerName" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Teléfono *</label>
+                    <input type="tel" id="customerPhone" required placeholder="Ej: 3001234567">
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Dirección de entrega *</label>
+                    <textarea id="customerAddress" rows="3" required placeholder="Ej: Calle 123 #45-67, Barrio Centro"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Método de pago *</label>
+                    <select id="paymentMethod" required>
+                        <option value="">Selecciona...</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Transferencia">Transferencia bancaria</option>
+                        <option value="Datafono">Datafono (tarjeta)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="customerNotes">Observaciones adicionales</label>
+                    <textarea id="customerNotes" rows="2" placeholder="Ej: Llamar antes de llegar, etc."></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline" id="cancelCustomerModal">Cancelar</button>
+            <button class="btn btn-primary" id="confirmCustomerModal">
+                <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p class="contact-description">
+                        Estamos para ayudarte con tus proyectos. Visítanos en nuestro local o contáctanos para envíos a domicilio.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Calle Principal #123, Villa Rica, Cauca</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 7:00 AM - 7:00 PM</p>
+                                <p>Sábados: 8:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfonos</h4>
+                                <p>Fijo: (602) 123-4567</p>
+                                <p>Móvil/WhatsApp: +57 300 123 4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Solicitar Cotización</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Tu teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Describe lo que necesitas..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <h3>Ferretería Villa Rica</h3>
+                            <p>Materiales & Herramientas Profesionales</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Proveedores líderes en materiales de construcción y herramientas profesionales en Villa Rica.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/573001234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#productos"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="#categorias"><i class="fas fa-chevron-right"></i> Categorías</a></li>
+                        <li><a href="#como-comprar"><i class="fas fa-chevron-right"></i> Cómo Comprar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul class="footer-links">
+                        <li><a href="#herramientas"><i class="fas fa-chevron-right"></i> Herramientas Manuales</a></li>
+                        <li><a href="#electricas"><i class="fas fa-chevron-right"></i> Herramientas Eléctricas</a></li>
+                        <li><a href="#fontaneria"><i class="fas fa-chevron-right"></i> Fontanería</a></li>
+                        <li><a href="#construccion"><i class="fas fa-chevron-right"></i> Construcción</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Calle Principal #123, Villa Rica</p>
+                        <p><i class="fas fa-phone"></i> (602) 123-4567</p>
+                        <p><i class="fab fa-whatsapp"></i> +57 300 123 4567</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ferretería Villa Rica. Todos los derechos reservados.</p>
+                <p>Desarrollado con <i class="fas fa-heart"></i> para nuestros clientes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/573116457927" class="whatsapp-float" target="_blank" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">¿Necesitas ayuda?</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

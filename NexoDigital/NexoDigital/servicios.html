@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo Digital - Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- Header / Navegación común -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html" class="logo">NEXO DIGITAL</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="servicios.html" class="nav__link active">Servicios</a></li>
+                    <li class="nav__item"><a href="proceso.html" class="nav__link">Proceso</a></li>
+                    <li class="nav__item"><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li class="nav__item"><a href="planes.html" class="nav__link">Planes</a></li>
+                    <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section para Servicios -->
+        <section class="hero section">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Servicios <span class="highlight">Especializados</span></h1>
+                    <p class="hero__description">Expertos en el ciclo de vida completo del desarrollo de software B2B,
+                        desde la consultoría hasta el despliegue a gran escala.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Service Highlight -->
+        <section class="main-service section">
+            <div class="container">
+                <div class="main-service__content card animate-on-scroll">
+                    <div class="main-service__info">
+                        <h2 class="main-service__title">Desarrollo de Software a la Medida</h2>
+                        <p class="main-service__description">Desarrollamos software personalizado para empresas que buscan optimizar sus procesos, automatizar tareas repetitivas y mejorar la eficiencia operativa. Nuestro enfoque se centra en la creación de soluciones escalables, seguras y adaptadas a las necesidades específicas de cada cliente.</p>
+                        <div class="main-service__features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Software personalizado</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Escalabilidad</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Integración con sistemas existentes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Métricas y analytics en tiempo real</span>
+                            </div>
+                        </div>
+                        <a href="contacto.html" class="btn btn--primary">Iniciar Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Services -->
+        <section class="all-services section">
+            <div class="container">
+                <h2 class="section__title">Nuestros <span class="highlight">Servicios</span></h2>
+
+                <div class="services__grid">
+                    <div class="service__card card animate-on-scroll" id="custom-web">
+                        <div class="service__header">
+                            <h3 class="service__title">Desarrollo Web Personalizado</h3>
+                            <div class="service__target">
+                                <span class="target-badge">TARGET: TECH COMPANIES</span>
+                            </div>
+                        </div>
+
+                        <div class="service__content">
+                            <div class="service__problem">
+                                <h4>PROBLEMA</h4>
+                                <p>Las empresas tecnológicas en crecimiento enfrentan desafíos para escalar sus sistemas heredados, que a menudo presentan deuda técnica y limitaciones de rendimiento.</p>
+                            </div>
+
+                            <div class="service__solution">
+                                <h4>SOLUCIÓN TÉCNICA</h4>
+                                <p>Arquitectura de código limpio, 99.9% de tiempo de actividad y cumplimiento total de la seguridad ISO/SOC2.</p>
+                            </div>
+
+                            <div class="service__tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Microservicios</span>
+                                <span class="tech-badge">AWS/Azure</span>
+                            </div>
+
+                            <a href="contacto.html" class="service__link">Solicitar Technical Specs <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service__card card animate-on-scroll" id="ux-ui">
+                        <div class="service__header">
+                            <h3 class="service__title">UX/UI Design</h3>
+                            <div class="service__target">
+                                <span class="target-badge">TARGET: B2B PLATFORMS</span>
+                            </div>
+                        </div>
+
+                        <div class="service__content">
+                            <div class="service__problem">
+                                <h4>PROBLEMA</h4>
+                                <p>Las plataformas B2B con interfaces complejas y ricas en datos enfrentan altas tasas de abandono y fricción por parte de los usuarios.</p>
+                            </div>
+
+                            <div class="service__solution">
+                                <h4>SOLUCIÓN TÉCNICA</h4>
+                                <p>Interfaces impulsadas por datos que aumentan la finalización de tareas en un 40% y reducen los tickets de soporte.</p>
+                                    tickets.</p>
+                            </div>
+
+                            <div class="service__tech">
+                                <span class="tech-badge">Figma</span>
+                                <span class="tech-badge">Storybook</span>
+                                <span class="tech-badge">Design Systems</span>
+                                <span class="tech-badge">User Testing</span>
+                            </div>
+
+                            <a href="contacto.html" class="service__link">Ver nuestro Process <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service__card card animate-on-scroll">
+                        <div class="service__header">
+                            <h3 class="service__title">Landing Pages de Alto Rendimiento</h3>
+                            <div class="service__target">
+                                <span class="target-badge">TARGET: EQUIPOS DE MARKETING</span>
+                            </div>
+                        </div>
+
+                        <div class="service__content">
+                            <div class="service__problem">
+                                <h4>PROBLEMA</h4>
+                                <p>Baja conversión debido a tiempos de carga lentos y puntuaciones deficientes en Core Web Vitals.</p>
+                            </div>
+
+                            <div class="service__solution">
+                                <h4>SOLUCIÓN TÉCNICA</h4>
+                                <p>Tiempos de carga inferiores a 1 segundo, puntuaciones Lighthouse superiores a 98 y optimización completa para entrega en el borde.</p>
+                            </div>
+
+                            <div class="service__tech">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">Vercel</span>
+                                <span class="tech-badge">Web Vitals</span>
+                                <span class="tech-badge">A/B Testing</span>
+                            </div>
+
+                            <a href="contacto.html" class="service__link">Solicitar Performance Audit <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="service__card card animate-on-scroll">
+                        <div class="service__header">
+                            <h3 class="service__title">Integrations</h3>
+                            <div class="service__target">
+                                <span class="target-badge">TARGET: ENTERPRISE</span>
+                            </div>
+                        </div>
+
+                        <div class="service__content">
+                            <div class="service__problem">
+                                <h4>PROBLEMA</h4>
+                                <p>Datos aislados y flujos de trabajo manuales a través de plataformas heredadas desconectadas.</p>
+                            </div>
+
+                            <div class="service__solution">
+                                <h4>SOLUCIÓN TÉCNICA</h4>
+                                <p>Conectividad API perfecta a través de REST/GraphQL, middleware automatizado e integridad de datos.
+                                </p>
+                            </div>
+
+                            <div class="service__tech">
+                                <span class="tech-badge">GraphQL</span>
+                                <span class="tech-badge">REST APIs</span>
+                                <span class="tech-badge">Middleware</span>
+                                <span class="tech-badge">Data Sync</span>
+                            </div>
+
+                            <a href="contacto.html" class="service__link">Ver Integration Map <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="services-cta card animate-on-scroll">
+                    <h3 class="services-cta__title">¿No encuentras lo que buscas?</h3>
+                    <p class="services-cta__text">Cada proyecto es único. Si no ves tu necesidad específica en nuestra
+                        lista, hablemos sobre tu caso particular. Diseñamos soluciones a medida para desafíos técnicos
+                        complejos.</p>
+                    <a href="contacto.html" class="btn btn--primary">Agendar Consulta Técnica</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer común -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">Nexo Digital</h2>
+                    <p class="footer__description">Experto en ingeniería de software de alta gama para el mercado B2B
+                        global.</p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__title">Empresa</h3>
+                        <ul class="footer__list">
+                            <li><a href="quienes-somos.html">Nosotros</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="proyectos.html">Proyectos</a></li>
+                            <li><a href="planes.html">Planes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__title">Contacto</h3>
+                        <ul class="footer__list">
+                            <li><a href="contacto.html">Agendar llamada</a></li>
+                            <li><a href="contacto.html">Soporte</a></li>
+                            <li><a href="#" target="_blank">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Nexo Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <style>
+        /* Estilos específicos para servicios.html */
+        .main-service__content {
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(74, 68, 198, 0.1));
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .main-service__title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .main-service__description {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .main-service__features {
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .feature i {
+            color: var(--primary);
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service__card {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .service__header {
+            background: rgba(108, 99, 255, 0.1);
+            padding: 25px;
+            border-bottom: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .service__title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .target-badge {
+            background: rgba(108, 99, 255, 0.2);
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .service__content {
+            padding: 25px;
+        }
+
+        .service__problem,
+        .service__solution {
+            margin-bottom: 20px;
+        }
+
+        .service__problem h4,
+        .service__solution h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service__problem p,
+        .service__solution p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .service__tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .tech-badge {
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .service__link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .service__link:hover {
+            gap: 10px;
+        }
+
+        .services-cta {
+            text-align: center;
+            padding: 50px;
+            margin-top: 60px;
+            background: rgba(30, 35, 48, 0.7);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .services-cta__title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .services-cta__text {
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-service__content {
+                padding: 30px;
+            }
+
+            .main-service__title {
+                font-size: 2rem;
+            }
+
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-cta {
+                padding: 30px;
+            }
+        }
+    </style>
+</body>
+
+</html>

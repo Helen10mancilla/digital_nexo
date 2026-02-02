@@ -74,6 +74,29 @@
   </div>
 </section>
 
+<!-- Botón flotante -->
+ <link rel="stylesheet" href="./chatbot.css">
+ 
+<div id="chatbot-btn">💬</div>
+
+<!-- Chatbot -->
+<div id="chatbot" class="hidden">
+  <div class="chat-header">
+    <span>Asistente Barbería 💈</span>
+    <button id="close-chat">✕</button>
+  </div>
+
+  <div class="chat-body" id="chat-body">
+    <div class="bot-msg">👋 Hola, soy el asistente.<br>¿Qué deseas hacer?</div>
+    <div class="options">
+      <button onclick="startBooking()">📅 Agendar cita</button>
+      <button onclick="openWhatsApp()">📞 Hablar por WhatsApp</button>
+    </div>
+  </div>
+  <script src="./bot.js"></script>
+</div>
+
+
 <!-- CONTACTO -->
 <section class="contact">
   <h2>¿LISTO PARA EL CAMBIO?</h2>

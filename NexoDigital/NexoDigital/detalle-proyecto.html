@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto - Nexo Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: 140px;
+        }
+
+        .project-detail__header {
+            margin-bottom: 3rem;
+        }
+
+        .project-detail__category {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .project-detail__title {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .project-detail__image {
+            width: 100%;
+            height: 500px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            margin-bottom: 4rem;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .project-detail__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section__title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .detail-section__text {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            color: var(--light);
+        }
+
+        .results-list li i {
+            color: #4CAF50;
+            margin-top: 5px;
+        }
+
+        .tech-sidebar {
+            background: rgba(30, 35, 48, 0.5);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(108, 99, 255, 0.1);
+            height: fit-content;
+        }
+
+        .tech-sidebar__title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .tech-pill {
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        @media (max-width: 992px) {
+            .project-detail__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-detail__title {
+                font-size: 2.5rem;
+            }
+
+            .project-detail__image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html" class="logo">NEXO DIGITAL</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="servicios.html" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="proceso.html" class="nav__link">Proceso</a></li>
+                    <li class="nav__item"><a href="proyectos.html" class="nav__link active">Proyectos</a></li>
+                    <li class="nav__item"><a href="planes.html" class="nav__link">Planes</a></li>
+                    <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="project-content">
+        <!-- El contenido se cargará dinámicamente aquí -->
+        <div class="container error-message">
+            <h2>Cargando proyecto...</h2>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">Nexo Digital</h2>
+                    <p class="footer__description">Experto en ingeniería de software de alta gama para el mercado B2B
+                        global.</p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__title">Empresa</h3>
+                        <ul class="footer__list">
+                            <li><a href="quienes-somos.html">Nosotros</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="proyectos.html">Proyectos</a></li>
+                            <li><a href="planes.html">Planes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__title">Contacto</h3>
+                        <ul class="footer__list">
+                            <li><a href="contacto.html">Agendar llamada</a></li>
+                            <li><a href="contacto.html">Soporte</a></li>
+                            <li><a href="#" target="_blank">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Nexo Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import projectsData from './projects-data.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const projectId = params.get('id');
+            const project = projectsData[projectId];
+            const contentContainer = document.getElementById('project-content');
+
+            if (project) {
+                document.title = `${project.title} - Nexo Digital`;
+                contentContainer.innerHTML = `
+                    <section class="project-detail">
+                        <div class="container">
+                            <div class="project-detail__header animate-on-scroll">
+                                <span class="project-detail__category">${project.category}</span>
+                                <h1 class="project-detail__title">${project.title}</h1>
+                            </div>
+                            
+                            <img src="${project.image}" alt="${project.title}" class="project-detail__image animate-on-scroll">
+                            
+                            <div class="project-detail__grid">
+                                <div class="project-detail__main">
+                                    <div class="detail-section animate-on-scroll">
+                                        <h2 class="detail-section__title"><i class="fas fa-exclamation-circle"></i> El Desafío</h2>
+                                        <p class="detail-section__text">${project.problem}</p>
+                                    </div>
+                                    
+                                    <div class="detail-section animate-on-scroll">
+                                        <h2 class="detail-section__title"><i class="fas fa-lightbulb"></i> Nuestra Solución</h2>
+                                        <p class="detail-section__text">${project.fullDescription || project.solution}</p>
+                                    </div>
+                                    
+                                    <div class="detail-section animate-on-scroll">
+                                        <h2 class="detail-section__title"><i class="fas fa-chart-line"></i> Impacto y Resultados</h2>
+                                        <ul class="results-list">
+                                            ${project.results.map(res => `<li><i class="fas fa-check-circle"></i> ${res}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <aside class="tech-sidebar animate-on-scroll">
+                                    <h3 class="tech-sidebar__title">Stack Tecnológico</h3>
+                                    <div class="tech-list">
+                                        ${project.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
+                                    </div>
+                                    <a href="${project.liveUrl}" class="btn btn--primary btn--block" ${project.liveUrl === '#' ? 'style="display:none"' : ''}>Ver Demo en Vivo</a>
+                                    <a href="planes.html" class="btn btn--secondary btn--block" style="margin-top: 1rem; border-color: #4CAF50; color: #4CAF50;"><i class="fas fa-calculator"></i> Cotiza tu proyecto ya</a>
+                                    <a href="proyectos.html" class="btn btn--secondary btn--block" style="margin-top: 1rem">Volver a Proyectos</a>
+                                </aside>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else {
+                contentContainer.innerHTML = `
+                    <div class="container error-message">
+                        <h1>Proyecto no encontrado</h1>
+                        <p>Lo sentimos, el proyecto que buscas no existe o ha sido movido.</p>
+                        <a href="proyectos.html" class="btn btn--primary" style="margin-top: 2rem">Volver a Proyectos</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

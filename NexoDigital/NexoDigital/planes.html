@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Venta - Nexo Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .pricing {
+            padding: 140px 0 80px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: rgba(30, 35, 48, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid rgba(108, 99, 255, 0.1);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            background: linear-gradient(145deg, rgba(30, 35, 48, 0.9), rgba(108, 99, 255, 0.1));
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .pricing-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .pricing-name {
+            font-size: 1.5rem;
+            color: var(--light);
+            margin-bottom: 10px;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            margin-bottom: 15px;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li i {
+            color: #4CAF50;
+        }
+
+        .pricing-features li.disabled {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .pricing-features li.disabled i {
+            color: var(--gray);
+        }
+
+        .pricing-footer {
+            text-align: center;
+        }
+
+        .btn--pricing {
+            width: 100%;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: rgba(11, 15, 22, 0.5);
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(30, 35, 48, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(108, 99, 255, 0.05);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html" class="logo">NEXO DIGITAL</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="servicios.html" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="proceso.html" class="nav__link">Proceso</a></li>
+                    <li class="nav__item"><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li class="nav__item"><a href="planes.html" class="nav__link active">Planes</a></li>
+                    <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pricing section">
+            <div class="container">
+                <div class="hero__content" style="text-align: center; margin-bottom: 50px;">
+                    <h1 class="hero__title">Nuestros <span class="highlight">Planes</span> de Venta</h1>
+                    <p class="hero__description">Escoge la solución que mejor se adapte a la escala y objetivos de tu
+                        negocio.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Plan Emprendedor -->
+                    <div class="pricing-card animate-on-scroll">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Digital Básico</h3>
+                            <div class="pricing-price">$499<span>/proyecto</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Landing Page de alto impacto</li>
+                            <li><i class="fas fa-check-circle"></i> Diseño responsivo (Móvil/Tablet)</li>
+                            <li><i class="fas fa-check-circle"></i> Optimización SEO básica</li>
+                            <li><i class="fas fa-check-circle"></i> Integración con redes sociales</li>
+                            <li class="disabled"><i class="fas fa-times-circle"></i> Panel de administración avanzado
+                            </li>
+                            <li class="disabled"><i class="fas fa-times-circle"></i> Soporte 24/7</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="contacto.html?plan=basico" class="btn btn--secondary btn--pricing">Elegir Plan</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Corporativo -->
+                    <div class="pricing-card popular animate-on-scroll">
+                        <div class="popular-badge">MÁS POPULAR</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Business Pro</h3>
+                            <div class="pricing-price">$1.299<span>/proyecto</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Web App personalizada</li>
+                            <li><i class="fas fa-check-circle"></i> Integración con APIs externas</li>
+                            <li><i class="fas fa-check-circle"></i> Panel de control de usuario</li>
+                            <li><i class="fas fa-check-circle"></i> Analytics avanzados</li>
+                            <li><i class="fas fa-check-circle"></i> Soporte prioritario</li>
+                            <li class="disabled"><i class="fas fa-times-circle"></i> Infraestructura dedicada</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="contacto.html?plan=pro" class="btn btn--primary btn--pricing">Elegir Plan</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Enterprise -->
+                    <div class="pricing-card animate-on-scroll">
+                        <div class="pricing-header">
+                            <h3 class="pricing-name">Enterprise Custom</h3>
+                            <div class="pricing-price">Consultar<span></span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Soluciones a medida completa</li>
+                            <li><i class="fas fa-check-circle"></i> Arquitectura escalable en la nube</li>
+                            <li><i class="fas fa-check-circle"></i> Seguridad de grado bancario</li>
+                            <li><i class="fas fa-check-circle"></i> Integración con sistemas ERP/CRM</li>
+                            <li><i class="fas fa-check-circle"></i> Infraestructura dedicada</li>
+                            <li><i class="fas fa-check-circle"></i> Gestor de cuenta dedicado</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="contacto.html?plan=enterprise" class="btn btn--secondary btn--pricing">Contactar
+                                Ventas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section">
+            <div class="container">
+                <h2 class="section__title">Preguntas <span class="highlight">Frecuentes</span></h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cuánto tiempo toma completar un proyecto? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Depende de la complejidad. Una Landing Page básica toma entre 1-2
+                            semanas, mientras que una Web App corporativa puede tomar de 4 a 8 semanas.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Ofrecen mantenimiento post-lanzamiento? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Sí, todos nuestros planes incluyen un mes de soporte técnico gratuito.
+                            También ofrecemos planes de mantenimiento mensual personalizados.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo cambiar de plan a mitad del desarrollo? <i
+                                class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Absolutamente. Podemos ajustar el alcance del proyecto según tus
+                            necesidades en cualquier etapa del desarrollo.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">Nexo Digital</h2>
+                    <p class="footer__description">Experto en ingeniería de software de alta gama para el mercado B2B
+                        global.</p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__title">Empresa</h3>
+                        <ul class="footer__list">
+                            <li><a href="quienes-somos.html">Nosotros</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="proyectos.html">Proyectos</a></li>
+                            <li><a href="planes.html">Planes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__title">Contacto</h3>
+                        <ul class="footer__list">
+                            <li><a href="contacto.html">Agendar llamada</a></li>
+                            <li><a href="contacto.html">Soporte</a></li>
+                            <li><a href="#" target="_blank">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Nexo Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
