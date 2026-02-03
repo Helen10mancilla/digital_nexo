@@ -10,7 +10,7 @@ const projectsData = {
             "Ahorro anual de $2.5M en operaciones logísticas."
         ],
         tech: ["HTML", "CSS", "JavaScript"],
-        liveUrl: "https://restaurante-bar-la-tertulia.netlify.app/",
+        liveUrl: "https://restaurantelatertulia.org/",
         image: "./img/primerpiso2.webp",
         fullDescription: "El proyecto La Tertulia consistió en una transformación digital completa para un restaurante de alta gama que necesitaba optimizar su cadena de suministro. Implementamos una red de sensores IoT que monitorean el stock en tiempo real, integrándose directamente con una plataforma web administrativa."
     },
