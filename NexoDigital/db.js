@@ -1,10 +1,10 @@
 /**
- * Nexo Digital - Database Service
+ * Zyra Digital - Database Service
  * Provides a simple wrapper for localStorage to handle call scheduling data.
  */
 
 const DB_KEYS = {
-    APPOINTMENTS: 'nexodigital_appointments'
+    APPOINTMENTS: 'Zyradigital_appointments'
 };
 
 const Database = {
@@ -61,4 +61,4 @@ const Database = {
 };
 
 // Export to window object for global access if needed in static HTML
-window.NexoDB = Database;
+window.ZyraDB = Database;

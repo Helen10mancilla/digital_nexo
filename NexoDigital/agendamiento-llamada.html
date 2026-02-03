@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexo Digital - Agendar Llamada</title>
+    <title>Zyra Digital - Agendar Llamada</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -15,7 +15,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__logo">
-                <a href="index.html" class="logo">NEXO DIGITAL</a>
+                <a href="index.html" class="logo">Zyra DIGITAL</a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
@@ -157,7 +157,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__bottom text-center">
-                <p class="footer__copyright">© 2024 Nexo Digital. Todos los derechos reservados.</p>
+                <p class="footer__copyright">© 2026 Zyra Digital. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -201,7 +201,7 @@
 
                     // Save to "DB" and send via Formspree
                     setTimeout(() => {
-                        const success = window.NexoDB.saveAppointment(formData);
+                        const success = window.ZyraDB.saveAppointment(formData);
 
                         if (success) {
                             // Send to Formspree
